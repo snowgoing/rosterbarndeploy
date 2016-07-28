@@ -1,0 +1,11 @@
+## All
+node_modules
+dist
+config/secret.js
+.DS_Store
+
+## Vim
+*.swp
+
+## Node
+*.log
