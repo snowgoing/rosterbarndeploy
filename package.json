@@ -2,7 +2,7 @@
   "name": "webpack-heroku-boilerplate",
   "version": "1.0.0",
   "description": "Simplest Heroku starter kit for React apps.",
-  "main": "./src/index.js",
+  "main": "./src/entry.js",
   "homepage": "https://github.com/wallacyyy/webpack-heroku",
   "author": "Leonardo Couto",
   "license": "MIT",
