@@ -1,0 +1,278 @@
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+$navyBlue: #354458;
+$lightBlue: #3A9AD9;
+$teal: #29ABA4;
+$khaki: #E9E0D6;
+$peach: #EB7260;
+
+
+
+#homepage {
+	background: url('../images/aria.jpg') no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;	
+	// border: 2px solid green;
+}
+
+#imageContainer {
+	width: 20%;
+	// margin: 10px auto;
+	text-align: center;
+	// border: 3px solid green;
+	/*background-color: rgba(255,255,255,.7)*/
+}
+.homePageLogo {
+	margin: 0 auto;
+}
+.rosterLogo {
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	text-align: center;
+	// border: 3px solid yellow;
+}
+.centerLogin {
+	margin: auto;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 15px;
+}
+
+@media screen and (min-height: 635px) {
+	#imageContainer img {
+		width: 100px;
+		height: auto;
+		/*background-color: rgba(255,255,255,.7);*/
+		/*-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);*/
+	}
+
+	#divLine {
+		height: 1px;
+		width: 80%;
+		margin:  10px auto;
+		background-color: #e7e7e7;
+	}
+}
+
+
+#login {
+	width: 280px;
+	height: 320px;
+	background: #C3D0C9;
+	opacity: .5;
+	
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    -webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+}
+#form {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+   	box-sizing: border-box;
+   	text-align: center;
+    
+    			// border: 1px solid red;
+}
+#form input[type=text], #form input[type=password]{
+	background: #e9e9e9;
+	width: 220px;
+	height: 30px;
+	margin-bottom: 1px;
+	padding-left: 15px;
+	font-size: 20px;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+
+	-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+}
+
+#form input[type=checkbox]{
+	margin-top: 20px;
+}
+
+#form span:nth-child(3) {
+	color: #30478A;
+	font-size: 16px;
+	font-weight: 700;
+	/*text-shadow: 2px 2px #fff;*/
+}
+
+#form button {
+	width: 220px;
+	height: 30px;
+	background: #30478A;
+	font-size: 14px;
+	color: white;
+	text-shadow: 2px 2px #000000;
+	margin-top: 5px; 
+
+	-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+	outline: none;
+}
+
+#schedule {
+	width: 400px;
+	height: 50px;
+		// border: 1px solid blue;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+#rememberMe {
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	font-size: 14px;
+}
+.rememberMeBox {
+	text-align: left;
+	width: 220px;
+	height: 20px;
+	margin: 10px auto;
+	// border: 1px solid yellow;
+}
+@media screen and (max-height: 635px) {
+	#imageContainer img, #divLine {
+		display: none;
+	}
+}
+
+
+@media screen and (max-height: 635px), screen and (max-width: 600px) {
+	#imageContainer img {
+		width: 100px;
+		height: auto;
+		/*background-color: rgba(255,255,255,.7);*/
+		/*-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);*/
+	}
+
+	#divLine {
+		height: 1px;
+		width: 80%;
+		margin:  10px auto;
+		background-color: #e7e7e7;
+	}
+	#login {
+		width: 350px;
+		height: 400px;
+		background: #C3D0C9;
+		opacity: .5;
+		
+		position: absolute;
+	    top:0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+
+	    margin: auto;
+
+	    -webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+	}
+	#form {
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		top:0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	   	box-sizing: border-box;
+	    
+	    /*border: 1px solid red;*/
+	}
+	#form input[type=text], #form input[type=password]{
+		background: #e9e9e9;
+		width: 300px;
+		height: 40px;
+		margin-bottom: 1px;
+		padding-left: 7px;
+		font-size: 12px;
+		border: 1px solid transparent;
+		box-sizing: border-box;
+
+		-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+	}
+
+	#form input[type=checkbox]{
+		margin-top: 10px;
+		
+	}
+
+	#form span {
+		color: #30478A;
+		font-size: 12px;
+		font-weight: 700;
+		
+		/*text-shadow: 2px 2px #fff;*/
+	}
+
+	#form button {
+		width: 300px;
+		height: 40px;
+		background: #30478A;
+		font-size: 12px;
+		color: white;
+		text-shadow: 2px 2px #000000;
+		margin-top: 2px; 
+
+		-webkit-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+		box-shadow: 6px 6px 16px -2px rgba(0,0,0,0.75);
+
+		outline: none;
+	}
+
+	#schedule {
+		width: 250px;
+		height: 75px;
+		/*border: 1px solid blue;*/
+		margin-bottom: 5px;
+	}
+}

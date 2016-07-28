@@ -1,0 +1,449 @@
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+$greyScheme: #404040;
+$cakeBorder: #3665C1;
+$cakeBox: #2656B2;
+$cakeSelected: #302F3F;
+$scheduleHeader: #0E4583;
+
+// body {
+// 	font-family: 'Andale Mono';
+// }
+
+.adminBg {
+	// background: url('../images/bluebg.jpg') no-repeat center center fixed;
+	// background: #b1b1b1;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	// size: landscape; 
+}
+.adminHeader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid $darkgrey;
+	padding-left: 15px;
+	padding-top: 5px;
+	background: $greyScheme;
+	display: flex;
+	justify-content: space-between;
+}
+.adminHeader img {
+	height: 20px;
+	width: auto;
+}
+.roster {
+	font-family: Copperplate;
+	color: white;
+	font-size: 22px;
+	text-shadow: 1px 1px 0 #000;
+}
+.barn {
+	font-family: 'Cooper Black';
+	color: $selected;
+	font-size: 22px;
+	text-shadow: 1px 1px 0 #000;
+}
+.employee {
+	width: 15%;
+}
+.letter {
+	color: $gradientfrom2;
+	font-size: 24px;
+	text-shadow: 1px 1px 0 #000;
+}
+.logout, .settings, .options {
+	cursor: pointer;
+}
+.logout:hover, .settings:hover, .options:hover {
+	color: white;
+}
+.headerOptions {
+	display: flex;
+	justify-content: space-around;
+	width: 380px;
+	height: 40px;
+	line-height: 40px;
+	color: $textshadow;
+	font-family: Copperplate;
+}
+.departmentName {
+	font-size: 24px;
+}
+.fa-cogs, .fa-sign-out, .fa-bars {
+	margin: 0 15px 0 10px;
+}
+.fa-sign-out {
+	margin-right: 5px;
+}
+.adminContainer {
+	margin: 40px 0 0 0;
+	width: 100%;
+	height: auto;
+	padding-left: 200px;
+			// border: 2px solid red;
+}
+.scheduleFlex {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	min-height: 150px;
+			// border: 3px solid green;
+	// margin: 0 0 0 220px;
+	-moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.monthLabel {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid $darkgrey;
+	background: #0E4583;
+	font-family: Calibri;
+	font-size: 16px;
+
+	display: flex;
+	// justify-content: center;	
+	justify-content: space-between;
+
+}
+.shiftStatus {
+	width: 230px;
+	// border: 1px solid yellow;
+	line-height: 50px;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Arial';
+	letter-spacing: 2px;
+}
+.printClearButtons {
+	width: 250px;
+	height: 50px;
+	// line-height: 50px;
+	// vertical-align: center;
+			// border: 1px solid yellow;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.printClearButtons > button {
+	width: 100px;
+	height: 30px;
+	line-height: 20px;
+	font-size: 12px;
+	background: #b2b2b2;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+.printClearButtons > button:hover {
+	background: $gradientfrom2;
+}
+.adminPublish {
+	width: 18%;
+}
+
+.adminPublish button {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+    background-color: #1ED660;
+	text-shadow: 1px 1px black;
+	color: #fff;
+	letter-spacing: 1px;
+	border: none;
+	border-bottom: 4px solid black;
+	// border-right: 1px solid #90EEA0;
+	outline: none;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: 'Avenir Book';
+	-webkit-box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+	-moz-box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+	box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+	// border-radius: 5px;
+}
+.adminPublish button:active {
+	border: none;
+	height: 42px;
+	margin-top: 2px;
+}
+
+.navigate {
+	width: 460px;
+	display: flex;
+	// border: 1px solid green;
+}
+.weekLabel {
+	width: 380px;
+	// color: $gradientfrom2;
+	text-shadow:1px 1px 0 $textshadow; 
+	font-size: 20px;
+	// text-transform: uppercase;
+	// border: 1px solid yellow;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 0 #000;
+}
+.leftButton, .rightButton {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background: $selected;
+	align-self: center;
+	-webkit-box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+	-moz-box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+	box-shadow: 3px 2px 5px 0px rgba(64,64,64,0.5);
+}
+.leftButton:hover, .rightButton:hover {
+	background: $gradientfrom2;
+}
+.leftButton {
+	margin-right: 15px;
+
+}
+.rightButton {
+	margin-left: 15px;
+}
+
+.changeFlexBoxSize {
+	width: 1200px;
+	margin: 0 0 0 50px;
+	color: red;
+}
+.nextButtons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid blue;
+	// margin: 90px 0 0 220px;
+}
+.backForward > div > button {
+	font-size: 12px;
+	margin-left: 5px;
+	background: $gradientto; 
+    background: -moz-linear-gradient(top, $gradientfrom, $gradientto); 
+    background: -webkit-gradient(linear, left top, left bottom, from($gradientfrom), to($gradientto));
+    outline: none;
+}
+.backForward {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+}
+// .publish button{
+// 	width: 220px;
+// 	background: #1ED660;
+// 	color: $darkgrey;
+// 	text-shadow:0px 1px 0 #textshadow;
+// 	outline: none;
+// }
+// .hiddenDiv {
+// 	width: 10%;
+// 	height: 100%;
+// 	display: inline;
+// 	border: 1px solid green;
+// }
+.employee {
+	width: 14.3%;
+	font-size: 14px;
+	// border: 1px solid blue;
+}
+.schedule {
+	width: 100%;
+}
+.weekOf {
+	display: flex;
+	flex-wrap: nowrap;
+	// border: 1px solid red;
+	width: 100%;
+	padding-left: 3px;
+}
+.weekOf:first-child {
+	background: $greyScheme;
+}
+.weekOfDay {
+	width: 14.3%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	// border-left: 1px solid red;
+	border-right: 1px solid $darkgrey;
+	// color: white;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: white;
+}
+.weekOfDay p {
+	font-size: 12px;
+}
+.scheduledays {
+	display: flex;
+	flex-wrap: nowrap;
+	// flex-direction: row;
+	// border: 1px solid red;
+	width: 100%;
+	justify-content: space-between;
+	font-size: 14px;
+}
+.scheduledays > *, .blankEmployeeBox {
+	width: 14.3%;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	border-right: 1px solid $darkgrey;
+	border-top: 1px solid $darkgrey;
+	// color: white;
+}
+.blankEmployeeBox {	
+	background: $darkgrey;
+	color: white;
+	text-shadow:0px -1px 0 black;
+	font-family: Arial;
+	padding-left: 5px;
+	text-align: left;
+	font-size: 14px;
+	border-right: none;
+}
+.blankDayBox {
+	background: $darkgrey;
+}
+// .blankBox {
+// 	border: none;
+// }
+.namesAcross {
+	display: flex;
+	flex-wrap: nowrap;
+	// flex-direction: column;
+	border: 1px solid black;
+}
+.namesAcross:nth-child(even) {
+	background: #e9e9e9;
+}
+.eachDay {
+	width: 14.3%;
+	height: 40px;
+	// line-height: 30px;
+	border: 1px solid #f4f4f4;
+	text-align: center;
+
+}
+
+.eachDay input {
+	// width: 50px;
+	border: none;
+	outline: none;
+	background:transparent;
+	// border: 1px solid red;
+}
+// .eachDay input {
+// 	background: #e9e9e9;
+// 	width: 50px;
+// 	border: none;
+// 	outline: none;
+// }
+.eachDay input:only-of-type {
+	font-size: 12px;
+	font-family: 'Arial';
+}
+.fa-user-plus {
+	margin-left: 65px;
+	position: relative;
+}
+.fa-user-plus:hover {
+	color: $gradientfrom2;
+}
+.addUser {
+	width: 200px;
+	height: 200px;
+	background: red;
+}
+.grave {
+	background: #048F40;
+}
+.day {
+	background: #2F138A;
+}
+.swing {
+	background: #C92F06;
+}
+.all {
+	background: #042850;
+}
+.shiftTitle {
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: 700;
+}
+.employeeBox-enter {
+  opacity: 0.01;
+}
+
+.employeeBox-enter.employeeBox-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+
+.employeeBox-leave {
+  opacity: 1;
+}
+
+.employeeBox-leave.employeeBox-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.red {
+	background: red;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px $textshadow;
+}
+.yellow{
+	background: yellow;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px $textshadow;
+}
+.pink {
+	background: pink;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px $textshadow;
+}
+.orange {
+	background: orange;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px $textshadow;
+}
+@media print {
+	.sidePortal, .headerOptions, .printClearButtons, .rightButton, .leftButton, .nameImageBox img, .fa-user-plus {
+		visibility: hidden;
+		display: none;
+	}
+	.adminContainer {
+		padding-left: 0;
+	}
+	.weekOf {
+		border: 1px solid $darkgrey;
+	}
+	.weekOfDay {
+		height: 40px;
+	}
+
+}
