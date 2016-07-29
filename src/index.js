@@ -1,7 +1,7 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import App from './components/app'
+import './styles/app.scss'
 import Router from './routes/router';
 
-var appContainer = document.getElementById('app');
-
-render(Router, appContainer);
+render(Router, document.getElementById('main'))
