@@ -1,14 +1,14 @@
 import React from 'react';
-import store from 'store';
+import store from '../store';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import CallIn from 'ui/callIn';
-import SidePanel from 'ui/sidePanel';
+import CallIn from '../ui/callIn';
+import SidePanel from '../ui/sidePanel';
 import {Link, browserHistory} from 'react-router';
-import { getEmployeeSchedule, calendar } from 'api/data';
+import { getEmployeeSchedule, calendar } from '../api/data';
 
 
-require("assets/styles/calendar.scss");
-var image = require("assets/images/ariawhite.png");
+require("../assets/styles/calendar.scss");
+var image = require("../assets/images/ariawhite.png");
 require('font-awesome-webpack');
 var $ = require('jquery');
 

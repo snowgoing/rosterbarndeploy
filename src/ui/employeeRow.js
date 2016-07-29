@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployeeToSchedule from 'ui/employeeToSchedule';
+import EmployeeToSchedule from '../ui/employeeToSchedule';
 
 export default React.createClass({
 	render: function(){

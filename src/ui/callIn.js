@@ -1,7 +1,7 @@
 import React from 'react';
-import store from 'store';
+import store from '../store';
 
-require('assets/styles/callIn.scss');
+require('../assets/styles/callIn.scss');
 
 export default React.createClass({
 	handleSubmit: function(e){

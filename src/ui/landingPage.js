@@ -1,7 +1,7 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 
-require('assets/styles/landingPage.scss');
+require('../assets/styles/landingPage.scss');
 
 export default React.createClass({
 	login: function(e){

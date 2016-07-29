@@ -8,4 +8,4 @@ config/secret.js
 *.swp
 
 ## Node
-*.log
+*.loggit st

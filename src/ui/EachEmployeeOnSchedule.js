@@ -1,9 +1,9 @@
 import React from 'react';
-import store from 'store';
-import { setNewSchedule, sendEmployeeShiftObj, addEmployee, updateEmployee } from 'api/data';
+import store from '../store';
+import { setNewSchedule, sendEmployeeShiftObj, addEmployee, updateEmployee } from '../api/data';
 import TimePicker from 'material-ui/TimePicker';
 
-require('assets/styles/employeeToSchedule.scss');
+require('../assets/styles/employeeToSchedule.scss');
 
 export default React.createClass({
 	getInitialState: function() {

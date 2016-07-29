@@ -1,5 +1,5 @@
-import api from 'api/api';
-import store from 'store';
+import api from '../api/api';
+import store from '../store';
 import { v4 } from 'uuid';
 
 export function getShifts(year, month, day){

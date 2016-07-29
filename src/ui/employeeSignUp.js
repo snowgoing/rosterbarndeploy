@@ -1,12 +1,12 @@
 import React from 'react';
-import store from 'store';
-import { login, checkAdmin, addNewEmployeeUser } from 'api/data';
+import store from '../store';
+import { login, checkAdmin, addNewEmployeeUser } from '../api/data';
 import { Link, browserHistory, Router, Route } from 'react-router';
 
-require("assets/styles/home.scss");
-require("assets/styles/employeeSignUp.scss");
+require("../assets/styles/home.scss");
+require("../assets/styles/employeeSignUp.scss");
 
-var image = require("assets/images/ariawhite.png");
+var image = require("../assets/images/ariawhite.png");
 
 
 

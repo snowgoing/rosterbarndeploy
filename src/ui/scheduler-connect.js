@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import SidePanel from 'ui/sidePanel';
-import EmployeeToSchedule from 'ui/employeeToSchedule';
-import EmployeeInfoForm from 'ui/employeeInfoForm';
-import Confirm from 'ui/confirm';
-import { calendar, getWeekByWeek, getEmployeeSchedule, caltest, addNewEmployee, updateEmployee, sendEmployeeShiftObj } from 'api/data';
+import SidePanel from '../ui/sidePanel';
+import EmployeeToSchedule from '../ui/employeeToSchedule';
+import EmployeeInfoForm from '../ui/employeeInfoForm';
+import Confirm from '../ui/confirm';
+import { calendar, getWeekByWeek, getEmployeeSchedule, caltest, addNewEmployee, updateEmployee, sendEmployeeShiftObj } from '../api/data';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import store from 'store';
+import store from '../store';
 
-require("assets/styles/scheduler.scss");
+require("../assets/styles/scheduler.scss");
 
 var image = require("assets/images/logo2.png");
 var month = new Date().getMonth(), 

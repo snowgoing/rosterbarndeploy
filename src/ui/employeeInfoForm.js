@@ -1,8 +1,8 @@
 import React from 'react';
-import store from 'store';
-import { updateEmployee, registerNewEmail } from 'api/data';
+import store from '../store';
+import { updateEmployee, registerNewEmail } from '../api/data';
 
-require('assets/styles/employeeInfoForm.scss');
+require('../assets/styles/employeeInfoForm.scss');
 
 export default React.createClass({
 	getIntitalState: function(){

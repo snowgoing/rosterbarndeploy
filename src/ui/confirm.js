@@ -1,7 +1,7 @@
 import React from 'react';
-import store from 'store';
+import store from '../store';
 
-require('assets/styles/confirm.scss');
+require('../assets/styles/confirm.scss');
 
 export default React.createClass({
 	close: function(){

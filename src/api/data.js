@@ -1,5 +1,5 @@
-import api from 'api/api';
-import store from 'store';
+import api from '../api/api';
+import store from '../store';
 import { browserHistory } from 'react-router'; 
 
 api.new('https://sheltered-springs-57964.herokuapp.com/');

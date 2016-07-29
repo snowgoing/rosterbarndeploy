@@ -1,11 +1,11 @@
 import React from 'react';
-import store from 'store';
+import store from '../store';
 import { Link, browserHistory } from 'react-router';
-import { calendar, publish, getEmployeeSchedule, getWeekByWeek } from 'api/data';
+import { calendar, publish, getEmployeeSchedule, getWeekByWeek } from '../api/data';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
-require("assets/styles/sidePanel.scss");
+require("../assets/styles/sidePanel.scss");
 require('font-awesome-webpack');
 var $ = require('jquery');
 

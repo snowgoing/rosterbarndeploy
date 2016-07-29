@@ -1,13 +1,13 @@
 import React from 'react';
-import store from 'store';
+import store from '../store';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import SidePanel from 'ui/sidePanel';
-import EmployeeToSchedule from 'ui/employeeToSchedule';
-import EmployeeRow from 'ui/employeeRow';
-import EmployeeInfoForm from 'ui/employeeInfoForm';
-import Confirm from 'ui/confirm';
-import { addNewEmployee, getEmployeeSchedule, updateEmployee, sendEmployeeShiftObj } from 'api/data';
-import { getWeekByWeek } from 'api/workspace'
+import SidePanel from '../ui/sidePanel';
+import EmployeeToSchedule from '../ui/employeeToSchedule';
+import EmployeeRow from '../ui/employeeRow';
+import EmployeeInfoForm from '../ui/employeeInfoForm';
+import Confirm from '../ui/confirm';
+import { addNewEmployee, getEmployeeSchedule, updateEmployee, sendEmployeeShiftObj } from '../api/data';
+import { getWeekByWeek } from '../api/workspace'
 import { browserHistory } from 'react-router';
 import {v4} from 'uuid';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -18,8 +18,8 @@ import FlatButton from 'material-ui/FlatButton';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-require("assets/styles/scheduler.scss");
-var image = require("assets/images/logo2.png");
+require("../assets/styles/scheduler.scss");
+var image = require("../assets/images/logo2.png");
 var month = new Date().getMonth(), 
 	year = new Date().getFullYear(),
 	date = new Date().getDate(),

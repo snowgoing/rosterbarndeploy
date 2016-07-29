@@ -5,11 +5,11 @@ import thunk from 'redux-thunk';
 var createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 
 // App Reducers
-import ShowReducer from 'reducers/show';
-import EmployeeReducer from 'reducers/employee';
-import CalendarReducer from 'reducers/calendarReducer';
-import AdminReducer from 'reducers/admin';
-import CssReducer from 'reducers/css';
+import ShowReducer from './reducers/show';
+import EmployeeReducer from './reducers/employee';
+import CalendarReducer from './reducers/calendarReducer';
+import AdminReducer from './reducers/admin';
+import CssReducer from './reducers/css';
 
 
 // Combine Reducers

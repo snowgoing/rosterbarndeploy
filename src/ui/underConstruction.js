@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-require("assets/styles/underConstruction.scss");
+require("../assets/styles/underConstruction.scss");
 
 
 export default React.createClass({
