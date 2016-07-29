@@ -1,0 +1,138 @@
+// Color Palette   http://www.dtelepathy.com/blog/inspiration/beautiful-color-palettes-for-your-next-web-project 
+// Title: 'Our Little Projects'
+
+
+$navyBlue: #354458;
+$lightBlue: #3A9AD9;
+$teal: #29ABA4;
+$khaki: #E9E0D6;
+$peach: #EB7260;
+
+// Custom Colors
+
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+
+
+
+.employeeFlex {
+	display: flex;
+	flex-wrap: nowrap;
+	border: 1px solid red;
+	width: 1000px;
+	height: 50px;
+	margin: 50px auto;
+}
+// .testbox {
+// 	width: 120px;
+// 	height: 50px;
+// 	border: 1px solid blue;
+// }
+// .testbox1 {
+// 	width: 160px;
+// 	height: 50px;
+// 	border: 1px solid blue;
+// }
+// .testbox input {
+// 	visibility: hidden;
+// }
+
+.testColor {
+	background: yellow;
+}
+
+#test input {
+	text-align: center;
+	width: 100%;
+	// border-bottom: 1px solid $darkgrey;
+	// overflow-x: scroll;
+ //    overflow-y: hidden;
+    			// border: 1px solid blue;
+}
+// :not(:first-child)
+
+#test {
+	// border: 1px solid blue;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	padding: 3px;
+}
+.nameField {					// Each Name On Schedule
+	// background: $teal;
+	// color: $khaki;
+	// text-shadow:0px -1px 0 #fff;
+	text-align: left;
+	padding-left: 3px;
+	font-size: 14px;
+	font-family: Arial;
+	// overflow-x: scroll;
+ //    overflow-y: hidden;
+    white-space: nowrap;
+	// border: 1px solid $darkgrey;
+	// width: 100%;
+}
+.idNum {
+	font-size: 11px;
+	// border: 1px solid red;
+	// padding-left: 5px;
+	color: $darkgrey;
+	text-align: center;
+}
+.idNum:before {
+	content: "#"
+}
+.nameField input[type=text] {
+	// width: 200px;
+	// border: 2px solid blue;
+	// background: yellow;
+}
+.nameImageBox {
+	display: flex;
+	width: 100%;
+	// box-shadow: 1px 1px 1px $darkgrey;
+
+			// border: 2px solid $darkgrey;
+}
+// .nameImageBox:first-child {
+// 	overflow: hidden;
+// }
+.nameImageBox:first-child img {
+	width: 40px;
+	height: 34px;
+	border-radius: 5px;
+	// border-right: 1px solid $darkgrey;
+}
+.nameImageBox:first-child img:hover {
+	width: 44px;
+	height: 36px;
+	box-shadow: 2px 2px 2px $darkgrey;
+}
+.timeLocationBox {
+	display: flex;
+	flex-direction: column;
+	// border: 1px solid red;
+	// align-items: center;
+}
+.timeLocationBox > * {
+
+	// border: 1px solid green;
+}
+.nameIdBox {
+	display: flex;
+	flex-direction: column;
+}
+.locationStyle {
+	font-size: 10px;
+	color: $purpletheme;
+	font-weight: 600;
+}

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+
 // layouts
 import App from '../layouts/app';
 

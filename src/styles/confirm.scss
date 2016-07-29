@@ -1,0 +1,75 @@
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+$greyScheme: #404040;
+$cakeBorder: #3665C1;
+$cakeBox: #2656B2;
+$cakeSelected: #302F3F;
+$scheduleHeader: #0E4583;
+
+
+.confirmBox {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	margin: auto;
+	width: 250px;
+	height: 100px;
+	background: white;
+	// border: 1px solid red;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.confirmHeader {
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	background: #0E4583;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+	padding-left: 5px;
+}
+.confirmMessage {
+	width: 100%;
+	text-align: center;
+	font-family: Arial;
+	font-size: 14px;
+	background: white;
+	// border: 1px solid blue;
+	// color: white;
+	// text-shadow: 1px 1px 1px #000;
+}
+.confirmButtons {
+	width: 100%;
+	height: 30px;
+	line-height: 20px;
+	// background: #0E4583;
+	text-align: right;
+	padding: 5px 5px 5px 0;
+}
+.confirmButtons button {
+	background-color: $textshadow;
+	border-radius: 3px;
+	width: 60px;
+	height: 20px;
+	line-height: 15px;
+	// text-shadow: 1px 1px 1px #000;
+	// color: white;
+	font-family: Arial;
+	font-size: 12px;
+	margin-right: 10px;
+
+}

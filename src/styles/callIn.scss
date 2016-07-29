@@ -1,0 +1,104 @@
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+$navyBlue: #354458;
+$lightBlue: #3A9AD9;
+$teal: #29ABA4;
+$khaki: #E9E0D6;
+$peach: #EB7260;
+
+.shade {
+	position: fixed;
+	top: 0;
+	left: 0;
+	// background-size: cover;
+	height: 100%;
+	width: 100%;
+
+	background: rgba(21, 21, 21, .5);
+}
+
+.request_box, .error {
+	width: 450px;
+	height: 300px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	margin: auto;
+
+				// border: 1px solid red;
+	background: $selected;
+	// opacity: .8;
+	color: white;
+	text-shadow: 1px 1px 0 black;
+	font-size: 22px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 10px;
+	-moz-box-shadow:3px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25); 
+}
+.employeeOptions {
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	background: #e7e7e7;
+	position: relative;
+	z-index: 2;
+	color: black;
+	font-size: 14px;
+	font-family: Arial;
+}
+.request_header {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+				// border: 1px solid blue;
+	background: $gradientfrom2; 
+    // background: -moz-linear-gradient(top, $gradientfrom, $darkgrey); 
+    // background: -webkit-gradient(linear, left top, left bottom, from($gradientfrom2), to($gradientto2));
+	-moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
+	padding-left: 10px;
+	font-size: 18px;
+	color: black;
+	text-shadow: none;
+}
+.request_buttons {
+	text-align: right;
+}
+.request_span {
+	margin-left: 20px;
+	color: white;
+	text-shadow: 1px 1px 0 black;
+}
+.request_message {
+	width: 90%;
+	padding: 20px;
+	height: auto;
+	border: 1px solid white;
+	-moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.underline {
+	text-decoration: underline;
+}
+.confirm {
+	color: black;
+	font-size: 17px;
+	text-shadow: none;
+}

@@ -3,8 +3,8 @@ import store from '../store';
 import { login, checkAdmin } from '../api/data';
 import { Link, browserHistory } from 'react-router';
 
-require("../assets/styles/home.scss");
-var image = require("../assets/images/ariawhite.png");
+// require("../assets/styles/home.scss");
+var image = require("../images/ariawhite.png");
 
 export default React.createClass({
 	getInitialState: function(){

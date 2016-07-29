@@ -1,0 +1,128 @@
+$gradientfrom: #fff;
+$gradientto: #8a8a8a; 
+$gradientfrom2: #00d2ff;
+$gradientto2: #928DAB; 
+$textshadow: #e7e7e7;
+$darkgrey: #605c5b;
+$bordercolor: #3a3a3a;
+$bluetheme: #336eb5;
+$purpletheme: #0A4081;
+$sidepanel: #292E35;
+$selected: #b2b2b2;
+$greyScheme: #404040;
+$cakeBorder: #3665C1;
+$cakeBox: #2656B2;
+$cakeSelected: #302F3F;
+
+
+.bigFlex {
+	width: 600px;
+	height: 440px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	margin: auto;
+
+		// border: 4px solid red;
+
+	-moz-box-shadow:3px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25); 
+
+}
+.bigFlexHeader {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	background: #0E4583;
+	color: white;
+	text-shadow: 1px 1px 1px $darkgrey;
+	font-family: Helvetica;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 0 0 0 10px;
+}
+.employeeInfoFormBox {
+	
+				// border: 5px solid green;
+	display: flex;
+	justify-content: space-between;
+	// flex-direction: column;
+
+	font-family: Arial;
+
+	background: #e7e7e7;
+}
+.formBox ::-webkit-input-placeholder {
+	font-size: 12px;
+	padding-left: 3px;
+}
+.formBox {
+	width: 280px;
+	height: 360px;
+	display: flex;
+	flex-direction: column;
+		// border: 1px solid green;
+		
+}
+.formBox > input {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+			// border: 1px solid red;
+	padding-left: 3px;
+	font-size: 14px;
+}
+
+.formBox label {
+	font-size: 12px;
+	margin: 5px 0 5px 0;
+	padding-left: 3px;
+}
+.fullPic {
+	width: 280px;
+	height: 360px;
+			// border: 3px solid blue;
+}
+.fullPic img {
+	width: 100%;
+	height: auto;
+}
+.formButtons {
+	width: 100%;
+	height: 50px;
+	// line-height: 30px;
+			// border: 1px solid blue;
+	text-align: right;
+	background: #0E4583;
+	padding: 10px 5px 0 0;
+}
+.formButtons button {
+	background-color: $selected;
+	border-radius: 3px;
+	width: 100px;
+	height: 35px;
+	text-shadow: 1px 1px 1px #000;
+	color: white;
+	font-family: Arial;
+	font-size: 14px;
+}
+.formButtons button:first-child {
+	margin-right: 10px;
+}
+.phoneNumber {
+	display: flex;
+
+}
+.phoneNumber > input {
+	width: 40px;
+	font-size: 14px;
+	padding-left: 3px;	
+}
+.phoneNumber > input:last-child {
+	width: 50px;	
+}
