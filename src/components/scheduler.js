@@ -31,6 +31,7 @@ var month = new Date().getMonth(),
 
 export default React.createClass({
 	getInitialState: function() {
+		// console.log("hello", Cookie.get('token'));
 		return ({
 			weeklyCalendar: [],
 			employeeWeeklySchedule: [],
@@ -59,16 +60,16 @@ export default React.createClass({
 		this.refreshCurrentState();
 	},
 	refreshCurrentState: function(){
-		var addOnEndpoint = ((this.state.shiftNum) ? "?shift_title=" + this.state.shiftNum : "");
 		var departmentId = localStorage.getItem("departmentId");
-		getEmployeeSchedule(year, pythonMonth[month], (date + forward), addOnEndpoint, departmentId);
+		var shiftId = this.state.shiftNum;
 
-		console.log('Initial Params', year, pythonMonth[month], (date + forward), addOnEndpoint);
+		getEmployeeSchedule(year, pythonMonth[month], (date + forward), shiftId, departmentId);
+
+		// console.log('Initial Params', year, pythonMonth[month], (date + forward), addOnEndpoint);
 		getWeekByWeek(year, month, date + forward);
 		console.log("department", departmentId);
 
 		// Get New Date Object to send instead of (date + forward)
-		console.log('DepartmentId', departmentId)
 
 	},
 	nextSchedule: function(){
@@ -91,10 +92,10 @@ export default React.createClass({
 		this.refreshCurrentState();
 	},
 	filterByShift: function(shift, type){
-		var addOnEndpoint = ((shift) ? "?shift_title=" + shift : "");
-		var department = localStorage.getItem("departmentId");
-		console.log("d", department);
-		getEmployeeSchedule(year, pythonMonth[month], (date + forward), addOnEndpoint, department);
+		var shiftId = shift;
+		var departmentId = localStorage.getItem("departmentId");
+		
+		getEmployeeSchedule(year, pythonMonth[month], (date + forward), shiftId, departmentId);
 		getWeekByWeek(year, month, date + forward);
 		store.dispatch({
 			type: 'CHANGE_SHIFTBOX',
@@ -158,7 +159,8 @@ export default React.createClass({
 	},
 	logout: function(){
 		localStorage.clear();
-		
+		logout();
+		Cookie.remove('token');
 		store.dispatch({
 			type: 'USER_LOGOUT'
 		})
