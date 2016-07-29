@@ -9,7 +9,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import App from '../layouts/app';
 
 // import Homepage from 'ui/home';
-import Home from '../components/app';
+import Home from '../components/home';
+import Hello from '../components/app';
 
 
 
