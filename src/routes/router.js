@@ -6,10 +6,10 @@ import store from '../store';
 
 
 // layouts
-import App from '../components/app';
+import App from '../layouts/app';
 
 // import Homepage from 'ui/home';
-
+import Home from '../components/app';
 
 
 
@@ -17,7 +17,7 @@ export default (
  
     <Router history={browserHistory}>
       <Route component={App}>
-      	<Route path='/' component={App} />
+      	<Route path='/' component={Home} />
       </Route>
     </Router>
 
