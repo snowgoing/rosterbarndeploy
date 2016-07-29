@@ -12,6 +12,9 @@ import App from '../layouts/app';
 // import Homepage from 'ui/home';
 import Home from '../components/home';
 import Hello from '../components/app';
+import Calendar from '../components/calendar';
+import Scheduler from '../components/scheduler';
+import employeeSignUp from '../components/employeeSignUp';
 
 
 
@@ -21,6 +24,9 @@ export default (
 		    <Router history={browserHistory}>
 		      <Route component={App}>
 		      	<Route path='/' component={Home} />
+		      	<Route path='/calendar' component={Calendar} />
+		      	<Route path='/scheduler' component={Scheduler} />
+		      	<Route path='/employee/*' component={employeeSignUp} />	
 		      </Route>
 		    </Router>
 	    </Provider>
