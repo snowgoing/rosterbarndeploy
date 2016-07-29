@@ -4,7 +4,7 @@ export default React.createClass({
   render: function(){
     return (
       <div>
-        <h1>You've been changed</h1>
+        <h1>You've been changed again</h1>
       </div>
     )
   }
