@@ -13,13 +13,14 @@ import {v4} from 'uuid';
 import RaisedButton from 'material-ui/RaisedButton';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatButton from 'material-ui/FlatButton';
+import Cookie from 'js-cookie';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-// require("../assets/styles/scheduler.scss");
-// var image = require("../images/logo2.png");
+require("assets/styles/scheduler.scss");
+var image = require("assets/images/logo2.png");
 var month = new Date().getMonth(), 
 	year = new Date().getFullYear(),
 	date = new Date().getDate(),
@@ -31,7 +32,7 @@ var month = new Date().getMonth(),
 
 export default React.createClass({
 	getInitialState: function() {
-		// console.log("hello", Cookie.get('token'));
+		console.log("hello", Cookie.get('token'));
 		return ({
 			weeklyCalendar: [],
 			employeeWeeklySchedule: [],
@@ -115,6 +116,8 @@ export default React.createClass({
 	clearSchedule: function(){
 		var clearAll = [];
 		var employees = this.state.employeeWeeklySchedule;
+		var departmentId = localStorage.getItem("departmentId");
+		var shiftId = this.state.shiftNum;
 		for(let i = 0; i < employees.length; i++){
 			for(let j = 0; j < 7; j++){
 				clearAll.push({
@@ -124,8 +127,11 @@ export default React.createClass({
 				})
 			}
 		}
-		sendEmployeeShiftObj(clearAll);
-		this.refreshCurrentState();
+		sendEmployeeShiftObj(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
+		// console.log(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
+		// setTimeout(this.refreshCurrentState(), 2000);
+
+		//  year, month, day, shiftId, departmentId
 	},
 	setColor: function(val){
 		var fieldToChange = val

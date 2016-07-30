@@ -2,6 +2,7 @@ import api from '../api/api';
 import store from '../store';
 import { browserHistory } from 'react-router'; 
 import Cookie from 'js-cookie';
+import { v4 } from 'uuid';
 
 api.new('https://sheltered-springs-57964.herokuapp.com/');
 // api.new('http://10.68.0.45:8000/');
@@ -89,7 +90,7 @@ export function getEmployeeSchedule(year, month, day, shiftId, departmentId){
 								id: employees[i].id,
 								photo_url: employees[i].photo_url,
 								availability: employees[i].availability,
-								uniqueId: employees[i].id + '-' + employees[i].employee_id,
+								uniqueId: v4(),
 								phone_number: employees[i].phone_number,
 								email: employees[i].email,
 								position_title: employees[i].position_title
@@ -108,7 +109,7 @@ export function getEmployeeSchedule(year, month, day, shiftId, departmentId){
 								employee_id: employees[i].employee_id,
 								starting_time: currentShift.time || '',
 								station: currentShift.station || '',
-								uniqueId: uniqueId,
+								uniqueId: v4(),
 								classInfoTime: "timeField",
 								phone_number: employees[i].phone_number,
 								email: employees[i].email,
@@ -231,9 +232,15 @@ export function setNewSchedule(uniqueId, arr, newScheduleItem) {
 	})
 }
 
-export function sendEmployeeShiftObj(obj){
+export function sendEmployeeShiftObj(obj, year, month, day, shiftId, departmentId){
+	var year = year, month = month, day = day, shiftId = shiftId, departmentId = departmentId;
 	console.log('Send Employee Shift Obj', obj);
-	return api.post('/schedules/shift/many/', obj)
+	console.log(year, month, day, shiftId, departmentId);
+	return api.post('/schedules/shift/many/', obj).then(getEmployeeSchedule(year, month, day, shiftId, departmentId))
+}
+
+export function sendSingleEmployeeShiftObj(obj){
+	return api.post('/schedules/shift/many/', obj);
 }
 
 

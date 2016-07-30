@@ -38,7 +38,7 @@ export default React.createClass({
 		// 	starting_time: this.refs.starting_time.value
 		// });
 		
-		sendEmployeeShiftObj([{
+		sendSingleEmployeeShiftObj([{
 			day: this.props.thing.calendar_date,
 			employee: this.props.thing.id,
 			starting_time: this.refs.starting_time.value
