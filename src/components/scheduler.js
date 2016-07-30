@@ -6,7 +6,7 @@ import EmployeeToSchedule from '../components/employeeToSchedule';
 import EmployeeRow from '../components/employeeRow';
 import EmployeeInfoForm from '../components/employeeInfoForm';
 import Confirm from '../components/confirm';
-import { addNewEmployee, getWeekByWeek, getEmployeeSchedule, updateEmployee, sendEmployeeShiftObj } from '../api/data';
+import { addNewEmployee, getWeekByWeek, getEmployeeSchedule, updateEmployee, clearAllSchedule } from '../api/data';
 // import { getWeekByWeek } from '../api/workspace'
 import { browserHistory } from 'react-router';
 import {v4} from 'uuid';
@@ -127,7 +127,7 @@ export default React.createClass({
 				})
 			}
 		}
-		sendEmployeeShiftObj(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
+		clearAllSchedule(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
 		// console.log(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
 		// setTimeout(this.refreshCurrentState(), 2000);
 

@@ -232,11 +232,9 @@ export function setNewSchedule(uniqueId, arr, newScheduleItem) {
 	})
 }
 
-export function sendEmployeeShiftObj(obj, year, month, day, shiftId, departmentId){
+export function clearAllSchedule(array, year, month, day, shiftId, departmentId){
 	var year = year, month = month, day = day, shiftId = shiftId, departmentId = departmentId;
-	console.log('Send Employee Shift Obj', obj);
-	console.log(year, month, day, shiftId, departmentId);
-	return api.post('/schedules/shift/many/', obj).then(getEmployeeSchedule(year, month, day, shiftId, departmentId))
+	return api.post('/schedules/shift/many/', array).then(getEmployeeSchedule(year, month, day, shiftId, departmentId))
 }
 
 export function sendSingleEmployeeShiftObj(obj){
