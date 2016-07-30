@@ -19,8 +19,8 @@ import Cookie from 'js-cookie';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-require("assets/styles/scheduler.scss");
-var image = require("assets/images/logo2.png");
+// require("assets/styles/scheduler.scss");
+// var image = require("assets/images/logo2.png");
 var month = new Date().getMonth(), 
 	year = new Date().getFullYear(),
 	date = new Date().getDate(),
