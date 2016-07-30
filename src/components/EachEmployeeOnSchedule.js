@@ -1,6 +1,6 @@
 import React from 'react';
 import store from '../store';
-import { setNewSchedule, sendEmployeeShiftObj, addEmployee, updateEmployee } from '../api/data';
+import { setNewSchedule, sendSingleEmployeeShiftObj, addEmployee, updateEmployee } from '../api/data';
 import TimePicker from 'material-ui/TimePicker';
 
 // require('../assets/styles/employeeToSchedule.scss');
