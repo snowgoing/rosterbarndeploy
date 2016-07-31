@@ -46,14 +46,14 @@ export default React.createClass({
 			// station: this.refs.station.value
 			
 		}])
-		console.log([{
-			day: this.props.thing.calendar_date,
-			employee: this.props.thing.id,
-			starting_time: this.refs.starting_time.value
-			// ,
-			// station: this.refs.station.value
+		// console.log([{
+		// 	day: this.props.thing.calendar_date,
+		// 	employee: this.props.thing.id,
+		// 	starting_time: this.refs.starting_time.value
+		// 	// ,
+		// 	// station: this.refs.station.value
 			
-		}]);
+		// }]);
 	},
 	handleChange: function(e) {
 		// var value = e.target.value;
@@ -70,10 +70,10 @@ export default React.createClass({
 	},
 	handleNameBlur: function(e){
 		var val = this.refs.nameString.value.split(" ") || "";
-		console.log(this.state.id, {
-				first_name: val[0], 
-				last_name: val[1]
-			});
+		// console.log(this.state.id, {
+		// 		first_name: val[0], 
+		// 		last_name: val[1]
+		// 	});
 		if(this.state.nameString !== this.refs.nameString.value) {
 			updateEmployee(this.state.id, {
 				first_name: val[0], 

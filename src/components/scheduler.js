@@ -21,20 +21,21 @@ injectTapEventPlugin();
 
 // require("assets/styles/scheduler.scss");
 // var image = require("assets/images/logo2.png");
-var month = new Date().getMonth(), 
-	year = new Date().getFullYear(),
-	date = new Date().getDate(),
-	days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], 
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], 
 	day = days[new Date().getDay()], 
-	pythonMonth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-	months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],  
-	forward = 0
+	months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+Date.prototype.addDays = function(days){
+    var dat = new Date(this.valueOf());
+    dat.setDate(dat.getDate() + days);
+    return dat;
+}
 
 export default React.createClass({
 	getInitialState: function() {
 		console.log("hello", Cookie.get('token'));
 		return ({
-			weeklyCalendar: [],
+			currentDate: new Date(),
 			employeeWeeklySchedule: [],
 			flexbox_size: "",
 			shiftColor: "",
@@ -58,50 +59,43 @@ export default React.createClass({
 				showConfirm: currentStore.showReducer.showConfirm
 			})
 		}.bind(this));
-		this.refreshCurrentState();
+		this.refreshCurrentState(new Date());
 	},
-	refreshCurrentState: function(){
+	refreshCurrentState: function(dateObj, shiftId, clearAll){
 		var departmentId = localStorage.getItem("departmentId");
-		var shiftId = this.state.shiftNum;
-
-		getEmployeeSchedule(year, pythonMonth[month], (date + forward), shiftId, departmentId);
-
-		// console.log('Initial Params', year, pythonMonth[month], (date + forward), addOnEndpoint);
-		getWeekByWeek(year, month, date + forward);
-		console.log("department", departmentId);
-
-		// Get New Date Object to send instead of (date + forward)
-
+		var shiftId = ((shiftId) ? shiftId : this.state.shiftNum);
+		getEmployeeSchedule(dateObj, shiftId, departmentId, clearAll);
+		getWeekByWeek(dateObj);
+	},
+	handleDateChange: function(next){
+		var newWeekDate = this.state.currentDate.addDays(next);
+		this.refreshCurrentState(newWeekDate);
+		this.setState({
+			currentDate: newWeekDate
+		})
 	},
 	nextSchedule: function(){
-		forward += 7;
-		this.refreshCurrentState();
+		this.handleDateChange(7);
 	},
 	previousSchedule: function(){
-		forward -= 7;
-		this.refreshCurrentState();
+		this.handleDateChange(-7);
 	},
 	addEmployee: function(e){
-		console.log('test',localStorage.getItem("departmentId"))
-		e.preventDefault();
 		addNewEmployee({
 			first_name: "Add", 
 			last_name: "Employee",
 			availability: ((this.state.shiftNum) ? [this.state.shiftNum] : [1]),
 			department: localStorage.getItem("departmentId")
 		});
-		this.refreshCurrentState();
+		this.refreshCurrentState(this.state.currentDate);
 	},
-	filterByShift: function(shift, type){
-		var shiftId = shift;
-		var departmentId = localStorage.getItem("departmentId");
+	filterByShift: function(shiftId, type){
+		this.refreshCurrentState(this.state.currentDate, shiftId)
 		
-		getEmployeeSchedule(year, pythonMonth[month], (date + forward), shiftId, departmentId);
-		getWeekByWeek(year, month, date + forward);
 		store.dispatch({
 			type: 'CHANGE_SHIFTBOX',
 			shiftColor: type,
-			shiftNum: ((shift) ? shift : "")
+			shiftNum: ((shiftId) ? shiftId : "")
 		})
 	},
 	printSchedule: function(){
@@ -114,10 +108,9 @@ export default React.createClass({
 		})
 	},
 	clearSchedule: function(){
-		var clearAll = [];
-		var employees = this.state.employeeWeeklySchedule;
-		var departmentId = localStorage.getItem("departmentId");
 		var shiftId = this.state.shiftNum;
+		var employees = this.state.employeeWeeklySchedule;
+		var clearAll = [];
 		for(let i = 0; i < employees.length; i++){
 			for(let j = 0; j < 7; j++){
 				clearAll.push({
@@ -127,11 +120,9 @@ export default React.createClass({
 				})
 			}
 		}
-		clearAllSchedule(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
-		// console.log(clearAll, year, pythonMonth[month], (date + forward), shiftId, departmentId);
-		// setTimeout(this.refreshCurrentState(), 2000);
-
-		//  year, month, day, shiftId, departmentId
+		clearAllSchedule(clearAll);
+		this.refreshCurrentState(this.state.currentDate, shiftId, true);
+		;
 	},
 	setColor: function(val){
 		var fieldToChange = val
