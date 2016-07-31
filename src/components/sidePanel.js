@@ -99,9 +99,10 @@ export default React.createClass({
 	},
 	scheduleJump: function(item, e){
 		e.preventDefault();
-		console.log(item);
-		getEmployeeSchedule(item.year, (item.javascriptMonthNum + 1), item.day);
-		getWeekByWeek(item.year, item.javascriptMonthNum, item.day);
+		var date = new Date(item.year, item.javascriptMonthNum, item.day)
+		console.log(date);
+		getEmployeeSchedule(date);
+		getWeekByWeek(date);
 	},
 	shiftFilter: function(e){
 		var val = e.target.id[1];

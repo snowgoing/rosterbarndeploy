@@ -108,6 +108,7 @@ export default React.createClass({
 		})
 	},
 	clearSchedule: function(){
+		var departmentId = localStorage.getItem("departmentId");
 		var shiftId = this.state.shiftNum;
 		var employees = this.state.employeeWeeklySchedule;
 		var clearAll = [];
@@ -239,7 +240,10 @@ export default React.createClass({
 					<ReactCSSTransitionGroup transitionName="employeeBox" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
 						{(this.state.showForm) 
 							? <EmployeeInfoForm
-								info={this.state.employeeInfo} key={this.state.employeeInfo.uniqueId} /> 
+								info={this.state.employeeInfo} 
+								key={this.state.employeeInfo.uniqueId} 
+								refreshCurrentState={this.refreshCurrentState} 
+								currentDate={this.state.currentDate} /> 
 							: ""}	
 					</ReactCSSTransitionGroup>
 

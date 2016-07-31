@@ -39,7 +39,8 @@ export default React.createClass({
 			phone_number: this.refs.phone_number_1.value + this.refs.phone_number_2.value + this.refs.phone_number_3.value  || ""
 		});
 
-
+		this.props.refreshCurrentState(this.props.currentDate);
+		
 		store.dispatch({
 			type: 'CHANGE_SHOWFORM',
 			showForm: false
