@@ -7,8 +7,17 @@ import { updateEmployee, registerNewEmail } from '../api/data';
 export default React.createClass({
 	getIntitalState: function(){
 		return {
-			
+			phone_number_first: '',
+			phone_number_second: '',
+			phone_number_third: ''
 		}
+	},
+	componentWillMount: function(){
+		this.setState({
+			phone_number_first: ((this.props.info.phone_number) ? this.props.info.phone_number.slice(0,3) : ''),
+			phone_number_second: ((this.props.info.phone_number) ? this.props.info.phone_number.slice(3,6) : ''),
+			phone_number_third: ((this.props.info.phone_number) ? this.props.info.phone_number.slice(6,10) : '')
+		})
 	},
 	close: function(){
 		store.dispatch({
@@ -22,14 +31,7 @@ export default React.createClass({
 		if(this.props.info.email !== this.refs.email.value) {
 			registerNewEmail({email: this.refs.email.value, profile_id: this.props.info.id})
 		}
-		console.log(this.props.info.id, {
-			position_title: this.refs.position_title.value || "",
-			first_name: this.refs.first_name.value || "",
-			last_name: this.refs.last_name.value || "",
-			employee_id: this.refs.employee_id.value || "",
-			email: this.refs.email.value || "",
-			phone_number: this.refs.phone_number_1.value + this.refs.phone_number_2.value + this.refs.phone_number_3.value  || ""
-		});
+		
 		updateEmployee(this.props.info.id, {
 			position_title: this.refs.position_title.value || "",
 			first_name: this.refs.first_name.value || "",
@@ -40,7 +42,7 @@ export default React.createClass({
 		});
 
 		this.props.refreshCurrentState(this.props.currentDate);
-		
+
 		store.dispatch({
 			type: 'CHANGE_SHOWFORM',
 			showForm: false
@@ -69,9 +71,9 @@ export default React.createClass({
 					<input ref="email" placeholder="Email" defaultValue={this.props.info.email}/>
 					<label htmlFor="phone_number">Phone Number</label>
 					<div className="phoneNumber">
-						<input ref="phone_number_1" defaultValue={this.props.info.phone_number.slice(0,3)} maxLength="3"/>
-						<input ref="phone_number_2" defaultValue={this.props.info.phone_number.slice(3,6)} maxLength="3"/>
-						<input ref="phone_number_3" defaultValue={this.props.info.phone_number.slice(6,10)} maxLength="4"/>
+						<input ref="phone_number_1" defaultValue={this.state.phone_number_first} maxLength="3"/>&nbsp;
+						<input ref="phone_number_2" defaultValue={this.state.phone_number_second} maxLength="3"/>&nbsp;
+						<input ref="phone_number_3" defaultValue={this.state.phone_number_third} maxLength="4"/>
 					</div>
 					<label htmlFor="regular_days_off">Days Off</label>
 					<input ref="regular_days_off" placeholder="Days Off" defaultValue={this.props.info.regular_days_off}/>

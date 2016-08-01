@@ -61,11 +61,11 @@ export default React.createClass({
 		}.bind(this));
 		this.refreshCurrentState(new Date());
 	},
-	refreshCurrentState: function(dateObj, shiftId, clearAll){
+	refreshCurrentState: function(date, shiftId, clearAll){
 		var departmentId = localStorage.getItem("departmentId");
 		var shiftId = ((shiftId) ? shiftId : this.state.shiftNum);
-		getEmployeeSchedule(dateObj, shiftId, departmentId, clearAll);
-		getWeekByWeek(dateObj);
+		getEmployeeSchedule(date, shiftId, departmentId, clearAll);
+		getWeekByWeek(date);
 	},
 	handleDateChange: function(next){
 		var newWeekDate = this.state.currentDate.addDays(next);
@@ -82,7 +82,7 @@ export default React.createClass({
 	},
 	addEmployee: function(e){
 		addNewEmployee({
-			first_name: "Add", 
+			first_name: "New", 
 			last_name: "Employee",
 			availability: ((this.state.shiftNum) ? [this.state.shiftNum] : [1]),
 			department: localStorage.getItem("departmentId")
@@ -230,7 +230,7 @@ export default React.createClass({
 							
 						</div>
 						
-								<EmployeeRow employeeWeeklySchedule={this.state.employeeWeeklySchedule} />
+						<EmployeeRow employeeWeeklySchedule={this.state.employeeWeeklySchedule} />
 							
 					</div>
 				</div>
@@ -247,10 +247,12 @@ export default React.createClass({
 							: ""}	
 					</ReactCSSTransitionGroup>
 
+
 					<ReactCSSTransitionGroup transitionName="employeeBox" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
 						{(this.state.showConfirm) 
 							? <Confirm
-								key={v4()} clearSchedule={this.clearSchedule}/> 
+								key={v4()} 
+								clearSchedule={this.clearSchedule}/> 
 							: ""}	
 					</ReactCSSTransitionGroup>
 
